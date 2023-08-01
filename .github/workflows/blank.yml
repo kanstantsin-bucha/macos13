@@ -24,6 +24,7 @@ jobs:
           brew install xcodesorg/made/xcodes
           xcodes list
           brew install libressl
+          export PATH="/usr/local/opt/libressl/bin:$PATH"
           which openssl
           openssl version
 
