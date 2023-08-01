@@ -23,4 +23,7 @@ jobs:
           brew install unxip
           brew install xcodesorg/made/xcodes
           xcodes list
+          brew install libressl
+          which openssl
+          openssl version
 
