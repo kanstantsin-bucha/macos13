@@ -15,12 +15,13 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
+       # Runs Fastline from CMD
+      - name: Run a multi-line script
+        run: fastlane production_app_store
+
       # Runs Fastline using bundle
-      - name: Deploy production app to TestFlight
+      - name: Deploy production app to TestFlight using bundle
         run: bundle exec fastlane production_app_store
 
-      # Runs Fastline from CMD
-      - name: Run a multi-line script
-        run: |
-          fastlane --version
+     
 
