@@ -28,5 +28,5 @@ jobs:
           export PATH="/usr/local/opt/libressl/bin:$PATH"
           which openssl
           openssl version
-          fastlane version
+          fastlane --version
 
