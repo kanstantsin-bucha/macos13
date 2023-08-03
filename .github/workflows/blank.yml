@@ -17,7 +17,7 @@ jobs:
 
       # Runs Fastline using bundle
       - name: Deploy production app to TestFlight
-        run: bundle exec fastlane --version
+        run: bundle exec fastlane production_app_stor
 
       # Runs Fastline from CMD
       - name: Run a multi-line script
