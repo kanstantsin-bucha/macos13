@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v3
 
        # Runs Fastline from CMD
-      - name: Run a multi-line script
+      - name: Deploy production app to TestFlight
         run: fastlane production_app_store
 
       # Runs Fastline using bundle
