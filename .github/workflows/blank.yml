@@ -15,18 +15,12 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # Runs a set of commands using the runners shell
+      # Runs Fastline using bundle
+      - name: Deploy production app to TestFlight
+        run: bundle exec fastlane --version
+
+      # Runs Fastline from CMD
       - name: Run a multi-line script
         run: |
-          #sudo log show --predicate "logType == error"  | grep osascript
-          sw_vers
-          brew install unxip
-          brew install xcodesorg/made/xcodes
-          xcodes list
-          openssl version
-          brew install libressl
-          export PATH="/usr/local/opt/libressl/bin:$PATH"
-          which openssl
-          openssl version
           fastlane --version
 
